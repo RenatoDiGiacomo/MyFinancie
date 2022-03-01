@@ -1,0 +1,54 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "title": "01/02",
+      "description": "TODO List",
+      "products": [
+        {
+          "id": 1,
+          "name": "Compras",
+          "price": 250.0,
+          "description": "TODO Produto"
+        },
+        {
+          "id": 2,
+          "name": "Agua",
+          "price": 250.0,
+          "description": "TODO Produto"
+        },
+        {
+          "id": 3,
+          "name": "Luz",
+          "price": 250.0,
+          "description": "TODO Produto"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "02/02",
+      "description": "TODO List",
+      "products": [
+        {
+          "id": 1,
+          "name": "Compras",
+          "price": 250.0,
+          "description": "TODO Produto"
+        },
+        {
+          "id": 2,
+          "name": "Agua",
+          "price": 250.0,
+          "description": "TODO Produto"
+        },
+        {
+          "id": 3,
+          "name": "Luz",
+          "price": 250.0,
+          "description": "TODO Produto"
+        }
+      ]
+    }
+  ]
+}
