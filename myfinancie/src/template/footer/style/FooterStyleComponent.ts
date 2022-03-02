@@ -7,13 +7,13 @@ const FooterStyle = styled.footer`
     height: 35px;
     position: fixed;
     bottom: 0;
-    background-color: #9A8C98;
+    background-color: #242424;
     align-items: center;
     justify-content: end;
     color: #4A4E69;
     span:last-child{
         padding-right: 16px;
-        color: #22223B;
+        color: #A3A3A3;
     }
 `;
 

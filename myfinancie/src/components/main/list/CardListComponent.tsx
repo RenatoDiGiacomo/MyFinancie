@@ -1,10 +1,10 @@
 
 import React from "react";
 
-function CardListComponent({name}:any):any {
+function CardListComponent({name}:any) {
 
     return (
-        <div id="Card" style={{border:"1px solid red"}}>
+        <div id="Card">
             <h1>{name}</h1>
         </div>
     )

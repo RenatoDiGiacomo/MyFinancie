@@ -6,7 +6,7 @@ const HeaderStyle = styled.header`
 	width: 100%;
 	height: 36px;
 	display: flex;
-	background-color: #9A8C98;
+	background-color: #242424;
 	align-items: center;
 	padding: 12px 0;
 	img {
@@ -14,9 +14,9 @@ const HeaderStyle = styled.header`
 		width: 55px;
 		margin-right: 16px;
 	}
-	h2 {
+	h1 {
 		background-color: inherit;
-		color: #fff;
+		color: #A3A3A3;
 	}
 `;
 

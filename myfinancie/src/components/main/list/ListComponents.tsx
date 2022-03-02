@@ -1,6 +1,9 @@
 import React from "react"
-import CardListComponent from "./CardListComponent";
+
+import SectionCardStyle from './style/SectionCardStyle'
+
 import { AppService, IDataBase } from "./IDataBase"
+
 
 function ListComponents() {
   const [data, setData] = React.useState<any>(null);
@@ -22,22 +25,23 @@ function ListComponents() {
     <>
       <h1>ListComponents</h1>
       <hr />
-      <CardListComponent name="test"/>
-      <div>
-        {data && data.map((list: IDataBase) => (
-          <ul>
-            <li key={list.id}>{list.title}
-              <li>{list.description}</li>
-              <ul>
+      <SectionCardStyle>
+      {data && data.map((list: IDataBase) => (
+          <div id="card">
+            <div key={list.id}>
+              <h1>{list.title}</h1>
+              <div>{list.description}</div>
+              <div>
                 {list.products && list.products.map((product) => (
-                  <li>{product.name}| {product.price}</li>
-                  
+                  <div>{product.name}| {product.price}</div>
+
                 ))}
-              </ul>
-            </li>
-          </ul>
-        ))}
-      </div>
+              </div>
+            </div>
+          </div>
+      ))}
+      </SectionCardStyle>
+
     </>
   )
 }
