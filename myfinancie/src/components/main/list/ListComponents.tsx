@@ -23,7 +23,7 @@ function ListComponents() {
       <h1>ListComponents</h1>
       <hr />
       <CardListComponent name="test"/>
-      {/* <div>
+      <div>
         {data && data.map((list: IDataBase) => (
           <ul>
             <li key={list.id}>{list.title}
@@ -37,7 +37,7 @@ function ListComponents() {
             </li>
           </ul>
         ))}
-      </div> */}
+      </div>
     </>
   )
 }
