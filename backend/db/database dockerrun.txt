@@ -1,0 +1,1 @@
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=tester -e MYSQL_DATABASE=backend -e MYSQL_USER=test -e MYSQL_PASSWORD=teste backend
