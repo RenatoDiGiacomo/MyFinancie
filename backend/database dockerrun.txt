@@ -1,0 +1,1 @@
+docker run --name myfinancie -e MYSQL_ROOT_PASSWORD=tester -e MYSQL_DATABASE=myfinancie -e MYSQL_USER=test -e MYSQL_PASSWORD=test --restart always -p 3306:3306 -d mariadb:latest --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
