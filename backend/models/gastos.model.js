@@ -3,13 +3,13 @@ import db from "../config/database.js";
 
 const { DataTypes } = Sequelize;
 
-const Product = db.define(
-  "products",
+const Gastos = db.define(
+  "gastos",
   {
     title: {
       type: DataTypes.STRING,
     },
-    price: {
+    textproduct: {
       type: DataTypes.DOUBLE,
     },
   },
@@ -18,4 +18,4 @@ const Product = db.define(
   }
 );
 
-export default Product;
+export default Gastos;

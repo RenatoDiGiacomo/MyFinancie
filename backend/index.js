@@ -1,6 +1,6 @@
 import express from "express"
 import db from "./config/database.js";
-import productRoutes from "./routes/index.js";
+import Routes from "./routes/index.js";
 import cors from "cors";
 
 const app = express();
@@ -14,6 +14,6 @@ try {
 
 app.use(cors());
 app.use(express.json());
-app.use("/products", productRoutes);
+app.use("/", Routes);
 
 app.listen(8080, () => console.log("Server ins running at port 8080"));
