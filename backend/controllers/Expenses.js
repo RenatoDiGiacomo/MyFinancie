@@ -1,31 +1,30 @@
-import Gastos from "../models/gastos.model.js";
+import Expenses from "../models/expenses.model.js";
 
-export const getAllGastos = async (req, res) => {
-  console.log(req);
+const getAllExpenses = async (req, res) => {
   try {
-    const gastos = await Gastos.findAll();
-    res.json(gastos);
+    const expenses = await Expenses.findAll();
+    res.json(expenses);
   } catch (err) {
     res.json({ message: err.message });
   }
 };
 
-export const getGastosById = async (req, res) => {
+const getExpensesById = async (req, res) => {
   try {
-    const gastos = await Gastos.findAll({
+    const expenses = await Expenses.findAll({
       where: {
         id: req.params.id,
       },
     });
-    res.json(gastos[0]);
+    res.json(expenses[0]);
   } catch (err) {
     res.json({ message: err.message });
   }
 };
 
-export const createGastos = async (req, res) => {
+const createExpenses = async (req, res) => {
   try {
-    await Gastos.create(req.body);
+    await Expenses.create(req.body);
     res.json({
       message: "Gasto Resgistrado com sucesso",
     });
@@ -34,9 +33,9 @@ export const createGastos = async (req, res) => {
   }
 };
 
-export const updateGastos = async (req, res) => {
+const updateExpenses = async (req, res) => {
   try {
-    await Gastos.update(req.body, {
+    await Expenses.update(req.body, {
       where: {
         id: req.params.id,
       },
@@ -47,9 +46,9 @@ export const updateGastos = async (req, res) => {
   }
 };
 
-export const deleteGastos = async (req, res) => {
+const deleteExpenses = async (req, res) => {
   try {
-    await Gastos.destroy({
+    await Expenses.destroy({
       where: {
         id: id.params.id,
       },
@@ -59,3 +58,5 @@ export const deleteGastos = async (req, res) => {
     res.json({ message: err.message });
   }
 };
+
+export { getAllExpenses, getExpensesById, createExpenses, updateExpenses, deleteExpenses };

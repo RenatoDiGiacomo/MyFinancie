@@ -1,19 +1,19 @@
 import express from "express";
 
 import {
-  createGastos,
-  deleteGastos,
-  getAllGastos,
-  getGastosById,
-  updateGastos,
-} from "../controllers/Gastos.js";
+  getAllExpenses,
+  getExpensesById,
+  createExpenses,
+  updateExpenses,
+  deleteExpenses,
+} from "../controllers/Expenses.js";
 
 const router = express.Router();
 
-router.get("/gastos", getAllGastos);
-router.get("/gastos/:id", getGastosById);
-router.post("/gastos", createGastos);
-router.patch("/gastos/:id", updateGastos);
-router.delete("/gastos/:id", deleteGastos);
+router.get("/gastos", getAllExpenses);
+router.get("/gastos/:id", getExpensesById);
+router.post("/gastos", createExpenses);
+router.patch("/gastos/:id", updateExpenses);
+router.delete("/gastos/:id", deleteExpenses);
 
 export default router;
