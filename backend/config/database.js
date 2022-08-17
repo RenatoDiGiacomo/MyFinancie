@@ -8,4 +8,12 @@ const db = new Sequelize(process.env.DATABASE, process.env.ROOT_USER, process.en
   dialect: process.env.DIALECT,
 });
 
+db.authenticate()
+  .then(() => {
+    console.log("Conexão feita com sucesso");
+  })
+  .catch((err) => {
+    console.error("Conexão Falhou", err);
+  });
+
 export default db;

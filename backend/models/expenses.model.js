@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize";
+import { Sequelize, DataTypes } from "sequelize";
 import db from "../config/database.js";
 
 const Expenses = db.define("expenses", {
@@ -8,9 +8,9 @@ const Expenses = db.define("expenses", {
     primaryKey: true,
     autoIncrement: true,
   },
-  cost:{
-    type: DataTypes.DECIMAL(10,2)
-  }
+  cost: {
+    type: DataTypes.DECIMAL(10, 2),
+  },
 });
 
 export default Expenses;
