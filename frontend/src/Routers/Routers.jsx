@@ -4,9 +4,22 @@ import App from "../App";
 
 import Dashboard from "../Pages/Dashboard";
 import Gastos from "../Pages/Gastos";
+import Login from "../Pages/Login";
 import Notfind from "../Pages/Notfind";
+import Signup from "../Pages/Signup";
 
 const Routers = () => {
+  if (localStorage.length <= 0) {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route index path="/*" element={<Login />} />;
+          <Route path="/signup" element={<Signup />} />;
+        </Routes>
+      </BrowserRouter>
+    );
+  }
+
   return (
     <BrowserRouter>
       <Routes>
