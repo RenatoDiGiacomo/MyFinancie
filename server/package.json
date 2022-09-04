@@ -2,11 +2,12 @@
   "name": "backend",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index"
+    "start": "node main",
+    "dev": "nodemon main"
   },
   "author": "",
   "license": "MIT",
@@ -17,7 +18,9 @@
     "express": "^4.18.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
-    "nodemon": "^2.0.19",
     "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }

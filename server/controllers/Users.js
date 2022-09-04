@@ -31,4 +31,4 @@ const GetUserFinance = async (req, res) => {
   }
 };
 
-export { getAllUsers,createUser, GetUserFinance };
+export { getAllUsers, createUser, GetUserFinance };

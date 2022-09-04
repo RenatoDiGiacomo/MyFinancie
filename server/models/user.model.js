@@ -1,6 +1,5 @@
-import { DataTypes, Sequelize } from "sequelize";
+import { Sequelize, DataTypes } from "sequelize";
 import db from "../config/database.js";
-
 
 const User = db.define("user", {
   id: {
@@ -18,6 +17,6 @@ const User = db.define("user", {
     allowNull: false,
   },
 });
-console.log(Sequelize.)
-// User.sync({ alter: true });
+
+User.sync();
 export default User;
