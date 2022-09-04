@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "./Form/Input";
+import Input from "../Form/Input";
 import axios from "axios";
 
 const Form = ({ userUrl }) => {

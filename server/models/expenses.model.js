@@ -8,9 +8,18 @@ const Expenses = db.define("expenses", {
     primaryKey: true,
     autoIncrement: true,
   },
-  cost: {
+  title: {
+    type: DataTypes.STRING(255),
+  },
+  value: {
     type: DataTypes.DECIMAL(10, 2),
   },
+  dueDate: {
+    type: DataTypes.DATE,
+  },
+  paidOut: {
+    type: DataTypes.BOOLEAN,
+  },
 });
-
+Expenses.sync();
 export default Expenses;

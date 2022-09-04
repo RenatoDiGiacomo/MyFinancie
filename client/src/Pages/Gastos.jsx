@@ -1,16 +1,17 @@
 import React from "react";
-import  api  from "../services/api";
+import FormExpensives from "../Components/Expensives/FormExpensives";
+import api from "../services/api";
 
 const Gastos = () => {
   const [data, setData] = React.useState();
 
   React.useEffect(() => {
-    const dataItems = api.get("/gastos").then((r) => r.data);
-    setData(dataItems);
-  },[]);
+    api.get("/gastos").then((r) => setData(r.data));
+  }, [data]);
 
   return (
     <div>
+      <FormExpensives />
       <div>{JSON.stringify(data)}</div>
     </div>
   );

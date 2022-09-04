@@ -6,11 +6,9 @@ import cors from "cors";
 const app = express();
 const port = 8080;
 
-const corsOps = {
-  origin: "http://localhost:8080/gastos",
-  crendentials: true,
-  optionSucessStatus:200,
-  allowedHeaders: ["Content-Type", "Authorization"],
+const corsConfig = {
+  origin: true,
+  credentials: true,
 };
 
 try {
@@ -19,8 +17,8 @@ try {
 } catch (err) {
   console.error("Erro de Conexão ao DB:", err);
 }
-console.log(process.env.REACT_APP_BACKEND);
-app.use(cors(corsOps));
+app.use(cors(corsConfig));
+app.options("*", cors(corsConfig));
 app.use(express.json());
 app.use("/", Routes);
 
