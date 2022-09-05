@@ -3,8 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "../App";
 
 import Dashboard from "../Pages/Dashboard";
-import Gastos from "../Pages/Gastos";
+import Expensives from "../Pages/Expensives";
 import Notfind from "../Pages/Notfind";
+import People from "../Pages/People";
 
 const Routers = () => {
   // if (localStorage.length <= 0) {
@@ -23,7 +24,8 @@ const Routers = () => {
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Dashboard />} />
-          <Route path="gastos" element={<Gastos />} />
+          <Route path="gastos" element={<Expensives />} />
+          <Route path="pessoas" element={<People />} />
           <Route path="/*" element={<Notfind />} />
         </Route>
       </Routes>
