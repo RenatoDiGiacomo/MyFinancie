@@ -1,16 +1,17 @@
 import React from "react";
-import { Outlet as Main } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
-import Menu from "./Components/Menu/Menu";
+import Menu from "./components/Menu/Menu";
+import ResetStyled from "./styles/ResetStyled";
 
 function App() {
   return (
     <>
+      <ResetStyled />
       <Menu />
-      <Main />
+      <Outlet />
     </>
   );
 }
 
 export default App;
-
