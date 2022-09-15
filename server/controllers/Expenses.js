@@ -50,7 +50,7 @@ const deleteExpenses = async (req, res) => {
   try {
     await Expenses.destroy({
       where: {
-        id: id.params.id,
+        id: req.params.id,
       },
     });
     res.json({ message: "Gasto Apagado com sucesso" });

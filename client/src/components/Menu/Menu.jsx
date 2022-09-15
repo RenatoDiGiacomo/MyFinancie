@@ -1,23 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { HeaderStyled, HeaderUl } from "../../styles/components/Menu";
+import {
+  HeaderMenuStyle,
+  HeaderMenuUlStyle,
+  HeaderMeuLiStyle,
+  TitleMenuStyled,
+} from "./Menu_Style";
 
 const Menu = () => {
   return (
-    <HeaderStyled>
-      <HeaderUl>
-        <li>
+    <HeaderMenuStyle>
+    {/* title On vertical*/}
+      {/* <TitleMenuStyled>
+        <p>Title</p>
+      </TitleMenuStyled> */}
+      {/* Menu list*/}
+      <HeaderMenuUlStyle>
+        <HeaderMeuLiStyle>
           <Link to="/">Dashboard</Link>
-        </li>
-        <li>
+        </HeaderMeuLiStyle>
+        <HeaderMeuLiStyle>
           <Link to="/gastos">Gastos</Link>
-        </li>
-        <li>
+        </HeaderMeuLiStyle>
+        <HeaderMeuLiStyle>
           <Link to="/pessoas">Pessoas</Link>
-        </li>
-      </HeaderUl>
-    </HeaderStyled>
+        </HeaderMeuLiStyle>
+      </HeaderMenuUlStyle>
+    </HeaderMenuStyle>
   );
 };
 

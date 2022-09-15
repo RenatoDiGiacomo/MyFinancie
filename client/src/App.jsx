@@ -1,15 +1,22 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet as Content } from "react-router-dom";
 
-import Menu from "./components/Menu/Menu";
+import GlobalStyle from "./styles/GlobalStyle";
 import ResetStyled from "./styles/ResetStyled";
+import Menu from "./components/Menu/Menu";
+import { ContentStyle, ContentInsideStyle } from "./styles/ContentStyle";
 
 function App() {
   return (
     <>
+      <GlobalStyle />
       <ResetStyled />
       <Menu />
-      <Outlet />
+      <ContentStyle>
+        <ContentInsideStyle>
+          <Content />
+        </ContentInsideStyle>
+      </ContentStyle>
     </>
   );
 }

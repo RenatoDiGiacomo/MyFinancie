@@ -1,6 +1,6 @@
 import React from "react";
 
-const Modal = ({ children, hidden, setHidden }) => {
+const Modal = ({ children, closeModal }) => {
   const StyleOverLay = {
     display: "flex",
     justifyContent: "center",
@@ -17,16 +17,16 @@ const Modal = ({ children, hidden, setHidden }) => {
     padding: "2.5rem",
   };
 
-  if (hidden)
+  
     return (
       <div style={StyleOverLay}>
         <div style={ModalBg}>
           <div>{children}</div>
-          <button onClick={() => setHidden(false)}>Fechar</button>
+          <button onClick={() => closeModal(false)}>Fechar</button>
         </div>
       </div>
     );
-  return null;
+ 
 };
 
 export default Modal;
